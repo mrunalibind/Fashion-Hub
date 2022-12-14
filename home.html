@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        /* Navigation Bar */
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav{
+            display: flex;
+            position: sticky;
+            top: 0px;
+            height: 70px;
+            font-size: larger;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: white;
+        }
+        #links{
+            display: flex;
+            width: 700px;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 45px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        #search{
+            display: flex;
+            border: 2px;
+            margin-left: 380px;
+            justify-content: space-around;
+            align-items: center;
+            border: 2ps solid black;
+        }
+        #logo{
+            margin-left: 50px;
+            height: 70px;
+            /* margin-top: 1px; */
+        }
+        #searchBtn{
+            display: flex;
+            border: 1px solid black;
+            justify-content: space-around; 
+           
+        }
+        
+        #bag{
+            /* border: 1px solid black; */
+            display: flex;
+            margin-left: 60px;
+            width: 200px;
+            align-content: center;
+            margin-top: 10px;
+            justify-content: space-around;
+        }
+        #bag>img{
+            margin-left: 30px;
+        }
+
+        /* /Middle Part */
+        #firstimg{
+            width: 100%;
+        }
+        #start{
+            display: flex;
+            width: 250px;
+            margin: auto;
+            padding: 30px 0px;
+            font-size: 18px;
+        }
+        #start a{
+            text-decoration: underline;
+            
+        }
+        #firstHead{
+            
+            position: absolute;
+            top: 400px;
+            font-weight: 500;
+            left: 23%;
+            /* position: relative; */
+            color: white;
+            font-size: 80px;
+            font-family: "Domine&family";
+        }
+        #firstpara{
+            position: absolute;
+            top: 520px;
+            font-weight: 500;
+            left: 28%;
+            /* position: relative; */
+            color: white;
+            font-size: 25px;
+            font-family: "Domine&family";
+        }
+        #btn{
+            display: flex;
+            position: absolute;
+            top: 600px;
+            /* border: 2px solid white; */
+            display: block;
+            width: 78%;
+            margin: auto;
+            font-weight: 500;
+            left: 15%;
+            color: white;
+            font-size: 25px;
+            font-family: "Domine&family";
+            
+        }
+        .bt{
+            margin-left: 30px;
+            padding: 15px 50px;
+            font-size: 18px;
+            background-color: white;
+            border: 0px;
+            cursor: pointer;
+        }
+        #firstbtn{
+            padding: 15px 50px;
+            font-size: 18px;
+            background-color: white;
+            border: 0px;
+            cursor: pointer;
+        }
+        #girl{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 80%;
+            margin: auto;
+            gap: 0px;
+            margin-top: 40px;
+        }
+        #girl>div>img{
+            width: 100%;
+        }
+        #new{
+            margin-left: 250px;
+            margin-top: 50px;
+        }
+        .newbtn{
+            margin-left: 30px;
+            padding: 10px 50px;
+            font-size: 18px;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        #ShopNew{
+            font-size: 40px;
+            font-weight: 300;
+            text-align: center;
+        }
+        #backFirstDiv{
+            display: flex;
+            width: 75%;
+            margin: auto;
+        }
+        #backFirstDiv img{
+            width: 100%;
+        }
+        #backFirstDiv>div{
+            margin: 15px;
+        }
+        #backFirstDiv p{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        #backFirstDiv h2{
+            font-size: 33px;
+            font-weight: 400;
+            margin: 20px 0px;
+        }
+        #backFirstDiv a{
+            text-decoration: underline;
+            font-size: 20px;
+        }
+        #storyHead{
+            font-size: 60px;
+            font-weight: 500;
+            margin-left: 220px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        #stories{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            width: 75%;
+            margin: auto;
+            gap: 20px;
+        }
+        #stories img{
+            width: 100%;
+        }
+        #stories h2{
+            margin: 20px 0px;
+        }
+        #stories a{
+            text-decoration: underline;
+            font-size: 20px;
+        }
+        #background{
+            background-color: rgb(240, 238, 235);
+            margin-top: 80px;
+        }
+        #Youwill{
+            display: flex;
+            width: 90%;
+            margin: auto;
+
+        }
+        #Youwill img{
+            width: 100%;
+        }
+        #moreYou{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 15px;
+            width: 97%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+        #moreYou img{
+            width: 100%;
+           
+        }
+        #moreYou a{
+            text-decoration: underline;
+        }
+        #contact{
+            display: flex;
+            align-items: center;
+            width: 500px;
+            /* border: 2px solid black; */
+            justify-content: space-around;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #contact img{
+            height: 25px;
+        }
+        #foot{
+            display: flex;
+            width: 1000px;
+        }
+        #foot p{
+            font-weight: 600;
+        }
+        #foot div{
+            margin: 40px;
+        }
+        footer{
+            line-height: 1.4;
+            background-color: #d8e3f6;
+            margin-top: 30px;
+            padding: 40px 150px;
+            font-size: 18px;
+        }
+        #footcolumn{
+            display: flex;
+            /* padding: 30px; */
+            box-sizing: border-box;
+        }
+        #icon img{
+            height: 30px;
+            margin-left: 5px;
+        }
+        #icon{
+            /* border: 2px solid black; */
+            width: 300px;
+            margin-left: 30px;
+            /* justify-content: space-between; */
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <img id="logo" style="border-radius: 50%;" src="/F (1).png" alt="">
+        <div id="links">
+            <a href="Gifts">Gifts</a>
+            <a href="New">New</a>
+            <a href="Women">Women</a>
+            <a href="Men">Men</a>
+            <a href="Kids">Kids</a>
+            <a href="Cashmere">Cashmere</a>
+            <a href="Home">Home</a>
+            <a href="Stories">Stories</a>
+            <a href="Sale">Sale</a>
+        
+        </div>
+        <div id="search">
+            <div id="searchBtn">
+                <img src="/icons8-search-30.png" alt="">
+                <input style="border: 0px;" type="text" placeholder="Search J.Crew">
+            </div>
+            <div id="bag">
+                <a href="Sign In">Sign In</a>
+                <img src="/icons8-bag-24.png" alt="">
+            </div>
+            
+        </div>
+
+    </nav>
+    
+    <div id="start">
+        <p>Have a question? We can help.</p>
+        <a href="*">*</a>
+    </div>
+    <div id="first">
+        <img id="firstimg" src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img0.jpg" alt="">
+        <h1 id="firstHead">The Fashion Hub Gift Guide</h1>
+        <p id="firstpara">Great holiday presents are part of our heritage. Here's our 2022 take...</p>
+        <div id="btn">
+            <button id="firstbtn">Shop for her</button>
+            <button class="bt">Shop for him</button>
+            <button class="bt">Shop for girls</button>
+            <button class="bt">Shop for boys</button>
+            <button class="bt">Shop for the home</button>
+        </div>
+    </div>
+     <div id="girl">
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg" alt="">
+            <!-- <h2>#girl</h1> -->
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img2_new.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img3.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img4.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img5.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img6.jpg" alt="">
+        </div>
+    </div> 
+    <div style="display: flex;" id="new">
+        <h2 id="ShopNew">Shop New Arrivals</h1>
+        <button class="newbtn">Shop Women</button>
+        <button class="newbtn">Shop Men</button>
+        <button class="newbtn">Shop Girl</button>
+        <button class="newbtn">Shop Boy</button>
+    </div>
+    <div id="background">
+        <img style="margin-left: 200px;margin-top: 80px;" src="https://www.jcrew.com/brand_creative/interface/logo_jc_collective_sm_nav.png?imformat=generic" alt="">
+        <p style="margin-left: 1190px;font-size: 20px;">Meet our creative community - ></p>
+        <div id="backFirstDiv" style="margin-top: 20px;">
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/11-Nov/2022nov_1025_hp_w_img12.jpg" alt="">
+                <p>Creative Spirits Series</p>
+                <h2>Marie Marot X Fashion Hub</h2>
+                <a class="FirstDivA" href="Shop our collab">Shop our collab</a>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/10-Oct/2022oct_0927_hp_w_img7.jpg" alt="">
+                <p>That fall feeling</p>
+                <h2>Layer love with Marjon Carlos</h2>
+                <a class="FirstDivA" href="Shop her story">Shop her story</a>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/10-Oct/2022oct_0927_hp_w_img8.jpg" alt="">
+                <p>Heritage made modern</p>
+                <h2>A Cashmere Remix with Lucy Williams</h2>
+                <a class="FirstDivA" href="Shop her story">Shop her story</a>
+            </div>
+        </div>
+        <h1 id="storyHead">More stories</h1>
+        <div id="stories">
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/14-Dec3/gifcyb_w_agnetha.jpg" alt="">
+                <h2>Most wanted: limited-edition Barbour® X J.Crew Agnetha jacket</h2>
+                <a href="">Get a closer look</a>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img9.jpg" alt="">
+                <h2>The edit: tartan time</h2>
+                <a href="">Shop the festive roundup</a>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/11-Nov/2022nov_1025_hp_w_img10.jpg" alt="">
+                <h2>Olympia’s picks</h2>
+                <a href="">Shop her December edit</a>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img11.jpg" alt="">
+                <h2>Design Try-ons: the Holiday Collection</h2>
+                <a href="">Shop the video</a>
+            </div>
+        </div>
+    </div>
+    <h1 style="margin-top: 100px;margin-bottom: 50px; font-weight: 300;text-align: center;font-size: 35px;">You’ll Also Love</h1>
+    <div id="Youwill">
+        <div>
+           <img src="https://www.jcrew.com/s7-img-facade/BM543_NA6445?wid=376" alt=""> 
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/s7-img-facade/BA538_BK0001_m?wid=376" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/s7-img-facade/BB984_BR6887?wid=376" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/s7-img-facade/BF016_NA6285_m?wid=376" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/s7-img-facade/AZ762_RD5545?wid=376" alt="">
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/s7-img-facade/AU763_WX0651?wid=376" alt="">
+        </div>
+    </div>
+   <h1 style="margin-top: 150px;text-align: center;font-size: 40px;font-weight: 300;">Shop our Instagram</h1>
+   <p style="text-align: center;margin-top: 20px;font-size: 25px;">(and join the fun with #injcrew)</p>
+
+  <h1 style="text-align: center;font-size: 40px;font-weight: 400;margin: 40px 0px;">More you need to see</h1>
+  <div id="moreYou">
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BD613_RD6052_m?wid=416" alt="">
+        <a href="">Shop Women's Sweater</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BN161_YD2172_m?wid=416" alt="">
+        <a href="Shop Women's Shirts & Tops">Shop Women's Shirts & Tops</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM312_PT3361_m?wid=416" alt="">
+        <a href="Shop Women's T-shirts & Tank Tops">Shop Women's T-shirts & Tank Tops</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM874_YD2455_m?wid=416" alt="">
+        <a href="Shop Women's Dresses & Jumpsuits">Shop Women's Dresses & Jumpsuits</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM557_YD2455_m?wid=416" alt="">
+        <a href="Shop Woman's Blazers">Shop Woman's Blazers</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM751_BK0001_m?wid=416" alt="">
+        <a href="Shop Women's Pants">Shop Women's Pants</a>
+    </div>
+  </div>
+  <hr>
+  <div id="contact">
+    <div>
+        <img src="https://img.icons8.com/ios-glyphs/512/twitter.png" alt="">
+    </div>
+    <div>
+        <p>@fashionHub_help</p>
+    </div>
+    <div>
+        <img src="https://img.icons8.com/ios-filled/512/phone.png" alt="">
+    </div>
+    <div>
+        <p>1 43 387 5776</p>
+    </div>
+    <div>
+        <img src="https://img.icons8.com/ios-glyphs/512/filled-message.png" alt="">
+    </div>
+    <div>
+        <p>Email Us</p>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footcolumn">
+        <div id="foot">
+            <div>
+                <p>Help</p>
+                <a href="">Customer Service</a>
+                <a href="">Track Orders</a>
+                <a href="">Returns & Exchanges</a>
+                <a href="">Shipping</a>
+                <a href="">International Orders</a>
+                <a href="">Contact Us</a>
+            </div>
+            <div>
+                <p>Quiks Links</p>
+                <a href="">Find a store</a>
+                <a href="">Size Charts</a>
+                <a href="">Refer a Friend</a>
+                <a href="">Offers & Promotions</a>
+                <a href="">My Favorites</a>
+            </div>
+            <div style="width: 450px;">
+                <p>About Fashion Hub</p>
+                <a href="">Our Story</a>
+                <a href="">Careers</a>
+                <a href="">Social Responsibility </a>
+                <a href="">California Transparency Act/Modern Slavery Act</a>
+                <a href="">Investor Relations</a>
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Policy</a>
+                <a href="">California Do Not Sell My Personal Information</a>
+                <a href="">Diversity, Equity and Inclusion at J.Crew Group</a>
+            </div>
+            
+        </div>
+        <div id="inputFoot" style="margin-left: 230px;">
+            <p style="font-weight: 600;">Like Being First?</p>
+            <p style="font-weight: 300;">Get can't-miss style news, before everybody else.</p>
+            <div style="margin-top: 20px;">
+                <input style="padding:10px;" type="text" placeholder="Enter your email">
+                <button style="background-color: black;color: white;padding: 10px;font-weight: 600;">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <div id="icon">
+        <img src="https://img.icons8.com/fluency-systems-regular/512/instagram-new.png" alt="">
+        <img src="https://img.icons8.com/ios-glyphs/512/facebook-f.png" alt="">
+        <img src="https://img.icons8.com/ios-glyphs/512/twitter.png" alt="">
+        <img src="https://img.icons8.com/sf-regular-filled/512/linkedin.png" alt="">
+        <img src="https://img.icons8.com/ios-glyphs/512/pinterest.png" alt="">
+        <img src="https://img.icons8.com/material-rounded/512/youtube-play.png" alt="">
+    </div>
+    <a style="text-decoration: underline;margin-left: 30px;margin-top: 100px;" href="India">India</a> 
+
+  </footer>
+  
+  
+</body>
+
+</html>
+
