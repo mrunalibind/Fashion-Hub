@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav{
+            display: flex;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            height: 70px;
+            font-size: larger;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: white;
+        }
+        #links{
+            display: flex;
+            width: 700px;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 45px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        #search{
+            display: flex;
+            border: 2px;
+            margin-left: 380px;
+            justify-content: space-around;
+            align-items: center;
+            border: 2ps solid black;
+        }
+        #logo{
+            margin-left: 50px;
+            height: 70px;
+            /* margin-top: 1px; */
+        }
+        #searchBtn{
+            display: flex;
+            border: 1px solid black;
+            justify-content: space-around; 
+           
+        }
+        
+        #bag{
+            /* border: 1px solid black; */
+            display: flex;
+            margin-left: 60px;
+            width: 200px;
+            align-content: center;
+            margin-top: 10px;
+            justify-content: space-around;
+        }
+        #bag>img{
+            margin-left: 30px;
+        }
+        #start{
+            display: flex;
+            width: 300px;
+            margin: auto;
+            padding: 30px 0px;
+            font-size: 18px;
+        }
+        #start a{
+            text-decoration: underline;
+            
+        }
+        #logo{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">
+            <img id="logo" src="/F (1).png" alt="">
+        </a>
+        <a href="./index.html"></a>
+        <div id="links">
+            <a href="Gifts">Gifts</a>
+            <a href="New">New</a>
+            <a href="./women.html">Women</a>
+            <a href="Men">Men</a>
+            <a href="Kids">Kids</a>
+            <a href="Cashmere">Cashmere</a>
+            <a href="Home">Home</a>
+            <a href="Stories">Stories</a>
+            <a href="Sale">Sale</a>
+        
+        </div>
+        <div id="search">
+            <div id="searchBtn">
+                <img src="/icons8-search-30.png" alt="">
+                <input style="border: 0px;border-color: white;outline: none;" type="text" placeholder="Search J.Crew">
+            </div>
+            <div id="bag">
+                <a href="Sign In">Sign In</a>
+                <a href="./cart.html">
+                    <img src="/icons8-bag-24.png" alt="">
+                </a>
+                
+            </div>
+            
+        </div>
+
+    </nav>
+    <div id="start">
+        <p>Have a question? We can help.</p>
+        <a href="*">*</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Clothing</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav{
+            display: flex;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            height: 70px;
+            font-size: larger;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            background-color: white;
+        }
+        #links{
+            display: flex;
+            width: 700px;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 45px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        #search{
+            display: flex;
+            border: 2px;
+            margin-left: 380px;
+            justify-content: space-around;
+            align-items: center;
+            border: 2ps solid black;
+        }
+        #logo{
+            margin-left: 50px;
+            height: 70px;
+            border-radius: 50%;
+            /* margin-top: 1px; */
+        }
+        #searchBtn{
+            display: flex;
+            border: 1px solid black;
+            justify-content: space-around; 
+           
+        }
+        #story>div{
+            cursor: pointer;
+        }
+        
+        #bag{
+            /* border: 1px solid black; */
+            display: flex;
+            margin-left: 60px;
+            width: 200px;
+            align-content: center;
+            margin-top: 10px;
+            justify-content: space-around;
+        }
+        #bag>img{
+            margin-left: 30px;
+        }
+        #firstimg{
+            width: 100%;
+        }
+        #start{
+            display: flex;
+            width: 300px;
+            margin: auto;
+            padding: 30px 0px;
+            font-size: 18px;
+        }
+        #start a{
+            text-decoration: underline;
+            
+        }
+        #recomm{
+            display: flex;
+            width: 90%;
+            margin: auto;
+        }
+        #recomm img{
+            width: 100%;
+           
+        }
+        
+        #recomm>div{
+            margin: 10px;
+        }
+        .rec{
+            cursor: pointer;
+        }
+        #story{
+            display: flex;
+            width: 93%;
+            margin: auto;
+        }
+        #story div{
+            margin: 10px;
+        }
+        #story img{
+            width: 100%;
+        }
+        #moreYou>div{
+            cursor: pointer;
+        }
+
+        #moreYou{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 15px;
+            width: 97%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+        #moreYou img{
+            width: 100%;
+           
+        }
+        #moreYou a{
+            font-size: 15px;
+            display: block;
+            text-align: center;
+            text-decoration: underline;
+        }
+        #contact{
+            display: flex;
+            align-items: center;
+            width: 500px;
+            /* border: 2px solid black; */
+            justify-content: space-around;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #contact img{
+            height: 25px;
+        }
+
+
+        #foot{
+            display: flex;
+            width: 1000px;
+        }
+        #foot p{
+            font-weight: 600;
+        }
+        #foot div{
+            margin: 40px;
+        }
+        #foot a{
+            font-size: 15px;
+        }
+        #foot>a:hover{
+            text-decoration: underline;
+        }
+        footer{
+            line-height: 1.4;
+            background-color: #edeef0;
+            margin-top: 20px;
+            padding: 40px 150px;
+            font-size: 18px;
+        }
+        #footcolumn{
+            display: flex;
+            box-sizing: border-box;
+        }
+        #icon img{
+            height: 30px;
+            margin-left: 5px;
+        }
+        #icon{
+            /* border: 2px solid black; */
+            width: 300px;
+            margin-left: 30px;
+            /* justify-content: space-between; */
+        }
+        #india{
+            align-content: center;
+            margin-left: 33px;
+        }
+        #story p{
+            font-family: cursive;
+        }
+        
+
+        body { font-family: sans-serif; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">
+            <img id="logo" src="/F (1).png" alt="">
+        </a>
+        <!-- <img id="logo" style="border-radius: 50%;" src="/F (1).png" alt=""> -->
+        <a href="./index.html"></a>
+        <div id="links">
+            <a href="Gifts">Gifts</a>
+            <a href="New">New</a>
+            <a href="./women.html">Women</a>
+            <a href="Men">Men</a>
+            <a href="Kids">Kids</a>
+            <a href="Cashmere">Cashmere</a>
+            <a href="Home">Home</a>
+            <a href="Stories">Stories</a>
+            <a href="Sale">Sale</a>
+        
+        </div>
+        <div id="search">
+            <div id="searchBtn">
+                <img src="/icons8-search-30.png" alt="">
+                <input style="border: 0px;border-color: white;outline: none;" type="text" placeholder="Search J.Crew">
+            </div>
+            <div id="bag">
+                <a href="Sign In">Sign In</a>
+                <a href="./cart.html">
+                    <img src="/icons8-bag-24.png" alt="">
+                </a>
+            </div>
+            
+        </div>
+
+    </nav>
+    
+    <div id="start">
+        <p>Have a question? We can help.</p>
+        <a href="*">*</a>
+    </div>
+    <img width="100%" src="https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img0.jpg" alt="">
+    <h1 style="position: absolute;top: 480px;font-weight: 200;left: 300px;color: rgb(240, 9, 70);font-size: 90px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">The <span>Holiday</spanHoliday></span> Collection is here</h1>
+    <p style="position: absolute;top: 600px;left: 650px;font-size: 25px;color: white;">No one does festive like we do...</p>
+    <a style="position: absolute;top: 660px;left: 760px;color: white;text-decoration: underline;font-size: 20px;" href="">Shop new arrivals</a>
+    
+    <h1 style="text-align: center;margin-top:65px ;font-size: 40px;font-weight: 300; margin-bottom: 30px;font-family: 'Times New Roman', Times, serif;">Recommended for Y-O-U</h1>
+    <div id="recomm">
+        <div class="rec">
+            <img src="https://www.jcrew.com/s7-img-facade/BA538_BK0001?wid=376" alt="">
+        </div>
+        <div class="rec">
+            <img src="https://www.jcrew.com/s7-img-facade/BA551_SU7517?wid=376" alt="">
+        </div>
+        <div class="rec">
+            <img src="https://www.jcrew.com/s7-img-facade/F8444_BR5735?wid=376" alt="">
+        </div>
+        <div class="rec">
+            <img src="https://www.jcrew.com/s7-img-facade/BD772_WT0002?wid=376" alt="">
+        </div>
+        <div class="rec">
+            <img src="https://www.jcrew.com/s7-img-facade/BA538_BK0001?wid=376" alt="">
+        </div>
+        <div class="rec">
+            <img src="https://www.jcrew.com/s7-img-facade/BA006_BL8133?wid=376" alt="">
+        </div>
+    </div>
+
+    <h1 style="text-align: center;font-size: 40px;margin-top:65px ;margin-bottom: 25px;font-weight: 300;font-family: 'Times New Roman', Times, serif;">Shops, stories & more</h1>
+
+    <div id="story">
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/2022/202214-Dec2/flyout/2022dec2_1213_flyouts_w_img0.jpg" alt="">
+            <p>The Ski Shop</p>
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/2022/202214-Dec2/flyout/2022dec2_1213_flyouts_w_img1_new.jpg" alt="">
+            <p>The Sun Shop</p>
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/2022/202214-Dec2/flyout/2022dec2_1213_flyouts_w_img2.jpg" alt="">
+            <p>Festive pj sets</p>
+        </div>
+        <div>
+            <img src="https://www.jcrew.com/brand_creative/2022/202214-Dec2/flyout/2022dec2_1213_flyouts_w_img3.jpg" alt="">
+            <p>New sweaters, new gifts</p>
+        </div>
+    </div>
+
+    
+    <h1 style="text-align: center;font-size: 40px;font-weight: 400;margin: 40px 0px;font-family: 'Times New Roman', Times, serif;">More you need to see</h1>
+  <div id="moreYou">
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BD613_RD6052_m?wid=416" alt="">
+        <a href="">Shop Women's Sweater</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BN161_YD2172_m?wid=416" alt="">
+        <a href="Shop Women's Shirts & Tops">Shop Women's Shirts & Tops</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM312_PT3361_m?wid=416" alt="">
+        <a href="Shop Women's T-shirts & Tank Tops">Shop Women's T-shirts & Tank Tops</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM874_YD2455_m?wid=416" alt="">
+        <a href="Shop Women's Dresses & Jumpsuits">Shop Women's Dresses & Jumpsuits</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM557_YD2455_m?wid=416" alt="">
+        <a href="Shop Woman's Blazers">Shop Woman's Blazers</a>
+    </div>
+    <div>
+        <img src="https://www.jcrew.com/s7-img-facade/BM751_BK0001_m?wid=416" alt="">
+        <a href="Shop Women's Pants">Shop Women's Pants</a>
+    </div>
+  </div>
+  
+
+
+
+    <p style="width: 90%;margin: auto;font-size: 12px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-top: 80px;">"At J.Crew, we make timeless women’s clothing that lasts a lifetime, paired with of the-moment styles season after season, decade after decade. Need an example? Here are just a few... Our everyday cashmere sweaters are kind of a big deal, not only because they’re crazy soft, but because they’re also crazy affordable. Throw on a crewneck or V-neck with a pair of our standout jeans for women, which—if you haven’t heard—we’re also known for. Whether you prefer a skinny, straight, cropped, or boyfriend fit, we’re your definitive denim destination (say that three times fast). The finishing touch: outfit-making shoes for women that are as covetable as they are wear-all-day comfortable. Planning on getting out of town? We make women’s swimsuits in every color, print and style under the sun, which is why they’re the best in the biz. We hate to brag, but did we mention they’re also super flattering? (Okay, sorry, just the once.) Or maybe you’re office-bound for now. Fortunately, we’re devoted to designing women’s suits in as many refined fabrics and sleek silhouettes as there are minutes in your 9-to-5 or meetings in your calendar. And after you clock out, we still have you covered, from happy hour to weekend soirees—and even that super fancy wedding you’re invited to, thanks to our assortment of super pretty wedding guest dresses. But that’s just what we do. No big deal."</p>
+    <br>
+  <br>
+  <hr>
+  <div id="contact">
+    <div>
+        <img src="https://img.icons8.com/ios-glyphs/512/twitter.png" alt="">
+    </div>
+    <div>
+        <p>@fashionHub_help</p>
+    </div>
+    <div>
+        <img src="https://img.icons8.com/ios-filled/512/phone.png" alt="">
+    </div>
+    <div>
+        <p>1 43 387 5776</p>
+    </div>
+    <div>
+        <img src="https://img.icons8.com/ios-glyphs/512/filled-message.png" alt="">
+    </div>
+    <div>
+        <p>Email Us</p>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footcolumn">
+        <div id="foot">
+            <div>
+                <p>Help</p>
+                <a href="">Customer Service</a>
+                <a href="">Track Orders</a>
+                <a href="">Returns & Exchanges</a>
+                <a href="">Shipping</a>
+                <a href="">International Orders</a>
+                <a href="">Contact Us</a>
+            </div>
+            <div>
+                <p>Quiks Links</p>
+                <a href="">Find a store</a>
+                <a href="">Size Charts</a>
+                <a href="">Refer a Friend</a>
+                <a href="">Offers & Promotions</a>
+                <a href="">My Favorites</a>
+            </div>
+            <div style="width: 450px;">
+                <p>About Fashion Hub</p>
+                <a href="">Our Story</a>
+                <a href="">Careers</a>
+                <a href="">Social Responsibility </a>
+                <a href="">California Transparency Act/Modern Slavery Act</a>
+                <a href="">Investor Relations</a>
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Policy</a>
+                <a href="">California Do Not Sell My Personal Information</a>
+                <a href="">Diversity, Equity and Inclusion at J.Crew Group</a>
+            </div>
+            
+        </div>
+        <div id="inputFoot" style="margin-left: 230px;">
+            <p style="font-weight: 600;">Like Being First?</p>
+            <p style="font-weight: 300;font-size: 15px;">Get can't-miss style news, before everybody else.</p>
+            <div style="margin-top: 20px;">
+                <input style="padding:10px;" type="text" placeholder="Enter your email">
+                <button style="background-color: black;color: white;padding: 10px;font-weight: 600;">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <div id="icon">
+        <img src="https://img.icons8.com/fluency-systems-regular/512/instagram-new.png" alt="">
+        <img src="https://img.icons8.com/ios-glyphs/512/facebook-f.png" alt="">
+        <img src="https://img.icons8.com/ios-glyphs/512/twitter.png" alt="">
+        <img src="https://img.icons8.com/sf-regular-filled/512/linkedin.png" alt="">
+        <img src="https://img.icons8.com/ios-glyphs/512/pinterest.png" alt="">
+        <img src="https://img.icons8.com/material-rounded/512/youtube-play.png" alt="">
+    </div>
+    <div id="india">
+        <a style="text-decoration: underline;" href="India">India</a> 
+        <img style="width: 30px;margin-top: 30px;" src="https://img.icons8.com/color/512/india.png" alt="">
+    </div>
+    <div style="display: flex;margin-top: 30px;width:250px;margin-left: 30px;justify-content: space-between;">
+        
+        <h4 style="font-family: Dancing+Script;">Madewell</h4>
+        <h4 style="font-family:sans-serif;">Fashion Hub</h4>
+    </div>
+    <p style="margin-left: 200px;">Factory</p>
+    <p style="margin-left: 30px;">@2022 Fashion Hub</p>
+    <div class="carousel" data-flickity='{ "groupCells": true ,"cellAlign": "left", "contain": true}'>
+        <!-- <div class="carousel-cell">          
+        </div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+      </div> -->
+       
+    
+  </footer>
+</body>
+</html>
