@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Fashion Hub</title>
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <style>
 
         /* Navigation Bar */
@@ -17,6 +18,7 @@
             display: flex;
             position: sticky;
             top: 0px;
+            z-index: 1;
             height: 70px;
             font-size: larger;
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -72,7 +74,7 @@
         }
         #start{
             display: flex;
-            width: 250px;
+            width: 300px;
             margin: auto;
             padding: 30px 0px;
             font-size: 18px;
@@ -142,6 +144,7 @@
         }
         #girl>div>img{
             width: 100%;
+            
         }
         #new{
             margin-left: 250px;
@@ -154,6 +157,10 @@
             background-color: white;
             border: 1px solid black;
             cursor: pointer;
+        }
+        .newbtn:hover{
+            background-color: rgb(89, 86, 86);
+            color: white;
         }
         #ShopNew{
             font-size: 40px;
@@ -258,16 +265,18 @@
         #foot div{
             margin: 40px;
         }
+        #foot>a:hover{
+            text-decoration: underline;
+        }
         footer{
             line-height: 1.4;
-            background-color: #d8e3f6;
+            background-color: #edeef0;
             margin-top: 30px;
             padding: 40px 150px;
             font-size: 18px;
         }
         #footcolumn{
             display: flex;
-            /* padding: 30px; */
             box-sizing: border-box;
         }
         #icon img{
@@ -280,6 +289,46 @@
             margin-left: 30px;
             /* justify-content: space-between; */
         }
+        #india{
+            align-content: center;
+            margin-left: 33px;
+        }
+        .carousel>div:nth-child(1){
+            background-color: red;
+        }
+
+
+
+        * { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.main-carousel{
+    width: 90%;
+    margin: auto;
+}
+
+
+.carousel-cell {
+  width: 25%;
+  height: 500px;
+  margin-top: 40px;
+  /* background: #8C8; */
+  border-radius: 5px;
+  /* counter-increment: carousel-cell; */
+}
+
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell); */
+  line-height: 200px;
+  font-size: 80px;
+}
+
+
     </style>
 </head>
 <body>
@@ -301,7 +350,7 @@
         <div id="search">
             <div id="searchBtn">
                 <img src="/icons8-search-30.png" alt="">
-                <input style="border: 0px;" type="text" placeholder="Search J.Crew">
+                <input style="border: 0px;border-color: white;" type="text" placeholder="Search J.Crew">
             </div>
             <div id="bag">
                 <a href="Sign In">Sign In</a>
@@ -331,7 +380,7 @@
      <div id="girl">
         <div>
             <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg" alt="">
-            <!-- <h2>#girl</h1> -->
+            <!-- <h1 style="position: absolute;top: 1750px;left: 220px;font-size: 48px;color: white;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 300;">Going somewhere snowy?</h1> -->
         </div>
         <div>
             <img src="https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img2_new.jpg" alt="">
@@ -426,6 +475,37 @@
     </div>
    <h1 style="margin-top: 150px;text-align: center;font-size: 40px;font-weight: 300;">Shop our Instagram</h1>
    <p style="text-align: center;margin-top: 20px;font-size: 25px;">(and join the fun with #injcrew)</p>
+
+
+   <div class="main-carousel">
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/14666177/pexels-photo-14666177.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/14656911/pexels-photo-14656911.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/14666362/pexels-photo-14666362.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/8422350/pexels-photo-8422350.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/12024288/pexels-photo-12024288.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/12003627/pexels-photo-12003627.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/12042261/pexels-photo-12042261.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    <div class="carousel-cell">
+        <img src="https://images.pexels.com/photos/14316783/pexels-photo-14316783.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+    </div>
+    
+    
+  </div>
+
 
   <h1 style="text-align: center;font-size: 40px;font-weight: 400;margin: 40px 0px;">More you need to see</h1>
   <div id="moreYou">
@@ -527,12 +607,46 @@
         <img src="https://img.icons8.com/ios-glyphs/512/pinterest.png" alt="">
         <img src="https://img.icons8.com/material-rounded/512/youtube-play.png" alt="">
     </div>
-    <a style="text-decoration: underline;margin-left: 30px;margin-top: 100px;" href="India">India</a> 
-
+    <div id="india">
+        <a style="text-decoration: underline;" href="India">India</a> 
+        <img style="width: 30px;margin-top: 30px;" src="https://img.icons8.com/color/512/india.png" alt="">
+    </div>
+    <div style="display: flex;margin-top: 30px;width:250px;margin-left: 30px;justify-content: space-between;">
+        
+        <h4 style="font-family: Dancing+Script;">Madewell</h4>
+        <h4 style="font-family:sans-serif;">Fashion Hub</h4>
+    </div>
+    <p style="margin-left: 200px;">Factory</p>
+    <p style="margin-left: 30px;">@2022 Fashion Hub</p>
+    <div class="carousel" data-flickity='{ "groupCells": true ,"cellAlign": "left", "contain": true}'>
+        <!-- <div class="carousel-cell">          
+        </div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+      </div> -->
+       
+    
   </footer>
   
   
 </body>
-
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        var elem = document.querySelector('.main-carousel');
+        var flkty = new Flickity( elem, {
+        // options
+        cellAlign: 'left',
+        contain: true
+        });
+    </script>
 </html>
 
