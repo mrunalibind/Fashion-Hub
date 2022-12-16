@@ -327,36 +327,199 @@ body { font-family: sans-serif; }
   line-height: 200px;
   font-size: 80px;
 }
+.overlay{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    transition: 1.5s;
+    z-index: -1;
+    opacity: 0;
+}
+.showoverlay{
+    opacity: 1;
+    z-index: 1;
+}
+.signForm{
+    width: 400px;
+    background-color: rgb(251, 247, 247);
+    padding: 10px 20px 50px 20px;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    z-index: 9;
+    transition: 1s;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+}
+.showForm{
+    top: 50%;
+}
+#cross{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+.signForm input{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+}
+.signForm button{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+}
+#backgroundNav{
+   /* display: none;  */
+}
+#wom:hover #backgroundNav{
+   display: block; 
+}
+#check p{
+    margin-top: 8px;
+}
+#backgroundNav li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 
-
+#thirdCol li{
+    list-style-type: none;
+}
     </style>
 </head>
 <body>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <nav>
-        <img id="logo" style="border-radius: 50%;" src="/F (1).png" alt="">
+        <img id="logo" style="border-radius: 50%;" src="F (1).png" alt="">
         <a href="./index.html"></a>
         <div id="links">
             <a href="Gifts">Gifts</a>
             <a href="New">New</a>
-            <a href="./women.html">Women</a>
+            <div><a id="wom" href="./women.html">Women</a>
+
+                <!-- <div id="backgroundNav">
+                    <div id="firstCol"  style="position: absolute;border: 2px solid red;width: 82%;background-color: white;border-radius: 2px;margin-top: 24px;padding: 20px 20px 80px 40px;">
+                        <div id="first1">
+                            <header style="font-family: 'Times New Roman', Times, serif;font-size: 28px;font-weight: 600;margin-bottom: 20px;margin-right: 150px;" >Women</header>
+                            <ul style="list-style-type: none;line-height: 26px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-bottom: 20px;">
+                                <li>New Arrivals</li>
+                                <li>Gifts</li>
+                                <li>Best Sellers</li>
+                                <li>Top Rated</li>
+                                <li>Brands We Love</li>
+                                <li>The Re-Imaginated</li>
+                                <li>Shop All</li>
+                                <li>Sale</li>
+                                <li>Best Sellers</li>
+                                <li>Best Sellers</li>
+                            </ul>
+                        </div>
+                        <div id="first2">
+                            <header style="font-family: 'Times New Roman', Times, serif;font-size: 24px;font-weight: 600;margin-bottom: 20px;" >What to Shop Now</header>
+                            <ul style="list-style-type: none;line-height: 26px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                <li>zthe Gift Guide</li>
+                                <li>Olympia's Picks</li>
+                                <li>Marie Marot X Fashion Hub</li>
+                                <li>The Sun Shop</li>
+                                <li>The Ski Shop</li>
+                                <li>The Holiday Part Shop</li>
+                                <li>Statement Coats</li>
+                                <li>Tartan Everything</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="seconCol" style="position: absolute;margin-left: 310px;margin-top: 50px;">
+                        <header style="font-family: 'Times New Roman', Times, serif;font-size: 23px;font-weight: 520;" >Clothing</header>
+                            <ul style="list-style-type: none;line-height: 26px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-top: 10px;">
+                                <li>All Clothing</li>
+                                <li>Sweaters</li>
+                                <li>Shirts & Tops</li>
+                                <li>T-Shirts & Tank Tops</li>
+                                <li>Dresses & Jumpsuits</li>
+                                <li>Blazers</li>
+                                <li>Pants</li>
+                                <li>Denim</li>
+                                <li>Coats & Jackets</li>
+                                <li>Skirts</li>
+                                <li>Shorts</li>
+                                <li>Swimers</li>
+                                <li>Sweatshirts & Sweatpants</li>
+                                <li>Active</li>
+                                <li>Matching Sets</li>
+                                <li>Pajamas & Intimates</li>
+                                <li>Suiting</li>
+                                <li>Maternity</li>
+                                
+                            </ul>
+                    </div>
+
+                    <div id="thirdCol" style="position: absolute;margin-left: 560px;margin-top: 50px;">
+                        <div id="third1">
+                            <header style="font-family: 'Times New Roman', Times, serif;font-size: 22px;font-weight: 500;margin-bottom: 20px;margin-right: 150px;" >Shoes & Boots</header>
+                            <ul style="list-style-type: none;line-height: 26px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-bottom: 40px;">
+                                <li>All Shoes & Boots</li>
+                                <li>Winter Boots</li>
+                                <li>Boots</li>
+                                <li>Slippers</li>
+                                <li>Birkenstocks</li>
+                                <li>Flats</li>
+                                <li>Heels</li>
+                                <li>Sneakers</li>
+                                
+                            </ul>
+                        </div>
+                        <div id="third2">
+                            <header style="font-family: 'Times New Roman', Times, serif;font-size: 22px;font-weight: 500;margin-bottom: 20px;" >Accessories</header>
+                            <ul style="list-style-type: none;line-height: 26px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-bottom: 20px;"></ul>
+                                <li>All Accessories </li>
+                                <li>Jewellery</li>
+                                <li>Bags</li>
+                                <li>Hats, Scarves, & Gloves</li>
+                                <li>Accessories & More</li>
+                                <li>Candles, Beauty, & Home</li>
+                                <li>Hair</li>
+                                <li>Socks & Tights</li>
+                                <li>Belts</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>  -->
+                
+            </div>
             <a href="Men">Men</a>
             <a href="Kids">Kids</a>
             <a href="Cashmere">Cashmere</a>
             <a href="Home">Home</a>
             <a href="Stories">Stories</a>
             <a href="Sale">Sale</a>
-        
+
         </div>
+
         <div id="search">
             <div id="searchBtn">
-                <img src="/icons8-search-30.png" alt="">
-                <input style="border: 0px;border-color: white;outline: none;" type="text" placeholder="Search J.Crew">
+                <img src="icons8-search-30.png" alt="">
+                <input id="enter" style="border: 0px;border-color: white;outline: none;" type="text" placeholder="Search Fashion">
             </div>
             <div id="bag">
-                <a href="Sign In">Sign In</a>
+                <button id="signIn" style="background-color: white;border: 0px;font-size: 18px;cursor: pointer;" onclick="showModal()" href="Sign In">Sign In</button>
+
                 <a href="./cart.html">
-                    <img src="/icons8-bag-24.png" alt="">
+                    <img src="icons8-bag-24.png" alt="">
                 </a>
                 
             </div>
@@ -365,6 +528,30 @@ body { font-family: sans-serif; }
 
     </nav>
     
+
+    <div class="overlay"></div>
+    <div class="signForm">
+        <span id="cross">&times;</span>
+        <form action="">
+            <h4 style="text-align: center;margin: 10px 0px;">Sign In</h4>
+            <div><input id="email" type="email" placeholder="Email Address*"></div>
+            <div><input id="pass" type="password" placeholder="Password*"></div>
+            <button>SIGN IN NOW</button>
+
+            <div id="check" style="display: flex;justify-content: space-between;margin-top: 20px;">
+               <div> <input style="width: 25px;" type="checkbox"></div>
+               <div ><p>Remember me!</p></div>
+               <div><p style="color: skyblue;">Forgot Password?</p></div>
+
+            </div>
+            
+            <p style="font-size: 15px;margin-top: 15px;margin-bottom: 50px;">This site is protected by reCAPTCHA and the Google <span style="text-decoration: underline;cursor: pointer;">Privacy Policy</span> and <span style="text-decoration: underline;cursor: pointer;">Terms of Service</span> apply.</p>
+
+            <hr>
+            <h4 style="margin-top: 30px;margin-bottom: 70px;text-align: center;">Don't have an account? <span style="color: skyblue;">Sign up now</span></h4>
+        </form>
+    </div>
+
     <div id="start">
         <p>Have a question? We can help.</p>
         <a href="*">*</a>
@@ -622,23 +809,9 @@ body { font-family: sans-serif; }
     </div>
     <p style="margin-left: 200px;">Factory</p>
     <p style="margin-left: 30px;">@2022 Fashion Hub</p>
-    <div class="carousel" data-flickity='{ "groupCells": true ,"cellAlign": "left", "contain": true}'>
-        <!-- <div class="carousel-cell">          
-        </div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-      </div> -->
-       
-    
+           
   </footer>
+  <a class="btn btn-danger" id="clicking" onclick="window.location='index.php'" href="./product.html">Continue</a>
   
   
 </body>
@@ -652,5 +825,61 @@ body { font-family: sans-serif; }
         contain: true
         });
     </script>
+    <script>
+        function showModal(){
+            document.querySelector(".overlay").classList.add("showoverlay")
+            document.querySelector(".signForm").classList.add("showForm")
+        }
+        function closeModal(){
+            document.querySelector(".overlay").classList.remove("showoverlay")
+            document.querySelector(".signForm").classList.remove("showForm")
+        }
+
+        let cross=document.querySelector("#cross");
+        cross.addEventListener("click",closeModal)
+
+
+
+        let form=document.querySelector("form");
+         data=[];
+        form.addEventListener("",(e)=>{
+            e.preventDefault();
+            let obj={
+                email:form.email.value,
+                password:form.pass.value
+            }
+            closeModal()
+            data.push(obj);
+            console.log(data);
+            
+        })
+
+
+        let enter=document.getElementById("enter");
+        enter.addEventListener("keypress",()=>{
+            if(event.key==="Enter"){
+                localStorage.setItem("input",enter.value)
+                document.getElementById("clicking").click();   
+                // console.log("Enter Event")
+                let objArr=[
+                    {
+                        img:"https://www.jcrew.com/s7-img-facade/BF356_WT0002_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=309&hei=309",
+                        name:"FormKnit suiting shell tank",
+                        price:"INR 4,759"
+                    }
+                ]
+            }
+        })
+
+
+        $(function(){
+        $('body').keyup(function(e){
+            if (e.keyCode == 13){  
+                $("#clicking").click();
+            }
+        })
+        });
+    </script>
+    
 </html>
 
