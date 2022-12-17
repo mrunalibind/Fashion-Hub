@@ -77,6 +77,49 @@
         #logo{
             border-radius: 50%;
         }
+        #fav-container{
+            width: 600px;
+            box-shadow: rgba(243, 236, 236, 0.574) 0px 2px 8px 0px;
+            /* background-color: rgb(242, 234, 234); */
+            margin: auto;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #fav-container img{
+            width: 300px;
+        }
+        #sec{
+            margin-top: 30px;
+            margin-right: 60px;
+            line-height: 40px;
+        }
+        #delete:hover{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        #delete{
+            padding: 10px 20px;
+            background-color: white;
+            border: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin-left: 50px;
+        }
+        #plus,#minus{
+            width: 34px;
+            padding: 5px 10px;
+            font-size: 20px;
+            border: 0px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: rgb(190, 184, 184);
+        }
+        #plus+p{
+            margin-left: 14px;
+        }
+        #plus:hover,#minus:hover{
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -117,5 +160,72 @@
         <p>Have a question? We can help.</p>
         <a href="*">*</a>
     </div>
+
+    <div id="fav-container">
+        <!-- Here Append All the Favourites-->
+      </div>
 </body>
+
+    <script>
+
+let container=document.getElementById("fav-container");
+let favData=JSON.parse(localStorage.getItem("cart"));
+
+    if(favData==null){
+      favData=[];
+    }
+    display(favData);
+
+    function display(data){
+      container.innerHTML="";
+      data.forEach((element) => {
+        let smallDiv=document.createElement("div");
+
+        let secDiv=document.createElement("div");
+        secDiv.setAttribute("id","sec");
+
+        let images=document.createElement("img");
+        images.setAttribute("src",element.image);
+        let brand=document.createElement("h3");
+        brand.innerText=element.brand;
+        let name=document.createElement("h4");
+        name.innerText=element.name;
+        let price=document.createElement("p");
+        price.innerText=element.price;
+    
+        let plus=document.createElement("button");
+        plus.innerText="+"
+        let para=document.getElementById("para")
+        // plus=document.getElementById("plus")
+        plus.setAttribute("id","plus")
+        plus.addEventListener("click",()=>{
+            para.innerText++;
+        })
+
+        let one=document.createElement("p");
+       one.innerText=1;
+       one.setAttribute("id","para")
+
+        let minus=document.createElement("button");
+        minus.innerText="-"
+        minus.setAttribute("id","minus")
+        minus.addEventListener("click",()=>{
+            para.innerText--;
+        })
+
+        let deleteBtn=document.createElement("button");
+        deleteBtn.innerText="Delete"
+        deleteBtn.setAttribute("id","delete")
+        
+
+        smallDiv.append(images);
+        secDiv.append(brand,name,price,plus,one,minus,deleteBtn)
+        container.append(smallDiv,secDiv)
+      });
+        
+    }
+    
+
+
+    </script>
 </html>
