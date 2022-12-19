@@ -77,6 +77,51 @@
         #logo{
             border-radius: 50%;
         }
+        #fav-container{
+            width: 600px;
+            box-shadow: rgba(243, 236, 236, 0.757) 0px 2px 8px 0px;
+            /* background-color: rgb(242, 234, 234); */
+            margin: auto;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #fav-container img{
+            width: 300px;
+        }
+        #sec{
+            margin-top: 30px;
+            margin-right: 60px;
+            line-height: 40px;
+        }
+        #delete:hover{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        #delete{
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: white;
+            border: none;
+            box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+            margin-left: 50px;
+        }
+        #plus,#minus{
+            cursor: pointer;
+            width: 34px;
+            padding: 5px 10px;
+            font-size: 24px;
+            border: 0px;
+            box-shadow: rgba(94, 90, 29, 0.417) 0px 2px 8px 0px;
+            background-color: rgb(134, 130, 130);
+        }
+        #plus+p{
+            margin-left: 14px;
+        }
+        #plus:hover,#minus:hover{
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -117,5 +162,83 @@
         <p>Have a question? We can help.</p>
         <a href="*">*</a>
     </div>
+
+    <div id="fav-container">
+        <!-- Here Append All the Favourites-->
+    </div>
+    <div style="width: 250px;margin: auto;margin-top: 40px;">
+        <h2>Item Total: <span> INR. 0</span></h2>
+        <!-- <h2>Estimated Total:<span> INR 0</span></h2> -->
+        <a href="">
+            <button id="check" style="padding: 10px 60px;
+            background-color: black;color: white;font-size: 20px;margin-top: 40px;cursor: pointer;">Checkout</button>
+        </a>
+    </div>
+
 </body>
+
+    <script>
+
+    let container=document.getElementById("fav-container");
+    let favData=JSON.parse(localStorage.getItem("cart"));
+
+    if(favData==null){
+      favData=[];
+    }
+    display(favData);
+
+    function display(data){
+      container.innerHTML="";
+      data.forEach((element) => {
+        let smallDiv=document.createElement("div");
+
+        let secDiv=document.createElement("div");
+        secDiv.setAttribute("id","sec");
+
+        let images=document.createElement("img");
+        images.setAttribute("src",element.image);
+        let brand=document.createElement("h3");
+        brand.innerText=element.brand;
+        let name=document.createElement("h4");
+        name.innerText=element.name;
+        let price=document.createElement("p");
+        price.innerText=element.price;
+        let plus=document.createElement("button");
+        plus.innerText="+";
+    
+        plus.setAttribute("id","plus")
+        let one=document.createElement("p");
+        one.innerText=1;
+        let minus=document.createElement("button");
+        minus.innerText="-";
+        minus.setAttribute("id","minus")
+        plus.addEventListener("click",()=>{
+        console.log(typeof +one.innerText);
+           one.innerText++;
+           total.innerText=element.price*(Number(one.innerText)); 
+        })
+        minus.addEventListener("click",()=>{
+           one.innerText--; 
+           total.innerText=element.price;
+        })
+
+        let deleteBtn=document.createElement("button");
+        deleteBtn.innerText="Delete"
+        deleteBtn.setAttribute("id","delete")
+        deleteBtn.addEventListener("click",()=>{
+            favData.splice(index,1)
+        })
+        let total=document.querySelector("span");
+        total.innerText=element.price;
+
+        smallDiv.append(images);
+        secDiv.append(brand,name,price,plus,one,minus,deleteBtn)
+        container.append(smallDiv,secDiv)
+      });
+        
+    }
+    
+
+
+    </script>
 </html>

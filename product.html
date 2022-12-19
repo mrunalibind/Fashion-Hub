@@ -206,7 +206,40 @@
             padding: 8px 15px;
             font-size: 15px;
         }
-
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            width: 90%;
+            margin: auto;
+            gap: 15px;
+        }
+        #container>div{
+            padding: 15px;
+        }
+        #container>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #addBtn{
+            display: none;
+        }
+        #container>div>p,#container>div>h3,#container>div>h4{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #container>div:hover #addBtn{
+            margin-top: 10px;
+            margin: auto;
+            display: block;
+            background-color: white;
+            padding: 10px 25px;
+            border: 1px solid black;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
 
     </style>
 </head>
@@ -240,6 +273,8 @@
                 <button id="signIn" style="background-color: white;border: 0px;font-size: 18px;cursor: pointer;" onclick="showModal()" href="Sign In">Sign In</button>
 
                 <a href="./cart.html">
+                    <!-- <img src="icons8-bag-24.png" alt=""> -->
+                    <p style="margin-left: 20px;background-color: rgb(107, 161, 227);width: 14px;height: 20px;border-radius: 50%;padding-left:5px;color: white;" id="count">0</p>
                     <img src="icons8-bag-24.png" alt="">
                 </a>
                 
@@ -299,6 +334,14 @@
         </div>
     </div>
     
+
+
+    <div id="container">
+
+    </div>
+
+    <br>
+    <br><br>
 
     <hr>
     <div id="contact">
@@ -394,11 +437,243 @@
     let enter=document.getElementById("enter");
     searchSpan.innerText='"'+name+'"';
 
-    let objArr=[
+    let data=[
         {
             image:"https://www.jcrew.com/s7-img-facade/BF356_WT0002_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=309&hei=309",
-            name:""
+            brand:"WILLA",
+            name:"FormNit Suting shell ",
+            price:"INR 4,772"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BD005_PR0138_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"WILLA",
+            name:"Villa Blazer Suit",
+            price:"INR 8,947"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BF422_BK0001_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"WILLA",
+            name:"Patch packet Blazer Suit",
+            price:"INR 9,375"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BK259_WY9619_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"WILLA",
+            name:"Kate straight-leg pant in Italina drapey suit",
+            price:"INR 13,765"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15926640/2021/11/17/76e53d3e-b75b-4abb-bd9b-6a2a5e2ef13b1637142789035-MISH-Women-Tops-6541637142788507-1.jpg",
+            brand:"MISH",
+            name:"Cowl Regular Top",
+            price:"INR 20,568"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13719118/2021/3/3/d7568371-96e2-4588-b0b2-fa7f3a2d6edb1614752823080-Athena-Turquoise-Blue-top-with-power-shoulder-sleeve-detail--1.jpg",
+            brand:"ATHENA",
+            name:"Power Shoulder Top",
+            price:"INR 763"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13843266/2022/4/18/abaa6501-e1be-4b8e-af96-ecae86eed9e41650283574811SassafrasBlackSilverStripedOneShoulderPuffSleevesCinchedWais1.jpg",
+            brand:"SASSAFRAS",
+            name:"Striped One Shoulder Puff Top",
+            price:"INR 568"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17024280/2022/2/2/866c1b35-fee3-490a-b848-930840e302e41643808268152TokyoTalkiesWhiteOff-ShoulderBardotCropTop1.jpg",
+            brand:"MANGO",
+            name:"Off Sholder Bordot Top",
+            price:"INR 999"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/13738182/2021/7/5/ae19d5f2-c171-4cef-baf7-360007dcf72c1625487089028-VENI-VIDI-VICI-Fuschia--Frilled-Tie-Back-Top-687162548708858-1.jpg",
+            brand:"Veni Vedi Viki",
+            name:"Backless Striped Top",
+            price:"INR 856"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15302810/2021/8/30/2d0e4dd7-0a8d-47fd-a7d7-ed28bc3d0a481630325465134STREET9MaroonFloralGeorgetteFittedCropTop1.jpg",
+            brand:"STREET",
+            name:"Floral Georgette Fitted Top",
+            price:"INR 719"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19574610/2022/8/20/5fd08f1c-a3ef-4fdd-9767-ebed2c76943e1660996236142DreamBeautyFashionBlackGeometricPrintTop1.jpg",
+            brand:"Dream Beauty Fashion",
+            name:"Geometric",
+            price:"INR 419"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20548066/2022/10/29/53e96829-a68d-4540-be9c-e06d305984501667054879343Tops1.jpg",
+            brand:"OXOLLOXO",
+            name:"Crop Top",
+            price:"INR 835"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16099742/2021/11/15/23f5ab62-0eff-449d-99da-074acb3b6c2b1636992843414TokyoTalkiesBlackFloralEmpireTop1.jpg",
+            brand:"TOKYO TALKIES",
+            name:"Floral Empire Top",
+            price:"INR 789"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/16707954/2022/1/27/d1b75a2b-0b4a-48fe-89a2-b7cd832e136d1643270230048-SASSAFRAS-Pink--White-Print-Top-8671643270229560-1.jpg",
+            brand:"SASSAFRAS",
+            name:"Abstract Puff Sleaves top",
+            price:"INR 968"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20548138/2022/10/29/a072790b-d5c4-4080-856b-5786e2bad0ff1667054893284Tops1.jpg",
+            brand:"OXOLLOXO",
+            name:"Floral print tie up Top",
+            price:"INR 947"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/15907906/2021/11/22/77436f0e-2796-45f3-951e-17cce6eceaab1637574542606GreenFloralJalHandprintedJaipuriFullLengthCottonNursingKafta1.jpg",
+            brand:"plusS",
+            name:"Floral regular top",
+            price:"INR 786"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/17442690/2022/3/9/ff0c7493-2f44-4006-80d3-d682c86fbe921646809212480TokyoTalkiesBlueOneShoulderTop1.jpg",
+            brand:"TOKYO TALKIES",
+            name:"One Shoulder Top",
+            price:"INR 965"
+        }
+        ,{
+            image:"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/19914076/2022/10/10/6aa25dec-42b0-4745-9a2b-310aa54e3f631665380043361MANGOCream-ColouredOrangeRoundNeckStripedTop1.jpg",
+            brand:"WILLA",
+            name:"Willa cropped flare pant suit",
+            price:"INR 20,568"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BM754_YD2191_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"MANGO",
+            name:"Round Neck Striped Top",
+            price:"INR 1854"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BM564_BK0001_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"KDTH",
+            name:"TAGESHI",
+            price:"INR 18,568"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BM747_BK0001_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"Kate",
+            name:"cropped flare pant suit",
+            price:"INR 20,568"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/H2743_BK0001_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"Brick",
+            name:"Blazer Shirt Suit",
+            price:"INR 20,568"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BK251_PR6028_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"WIGHL",
+            name:"Pant suit",
+            price:"INR 26,568"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BF423_WZ2576_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"Browny",
+            name:"Brown Skirt Suit",
+            price:"INR 4,568"
+        }
+        ,{
+            image:"https://www.jcrew.com/s7-img-facade/BF423_WZ2576_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"Browny",
+            name:"Brown Skirt Suit",
+            price:"INR 4,568"
+        },
+        {
+            image:"https://www.jcrew.com/s7-img-facade/BD006_GR6460_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
+            brand:"Browny",
+            name:"Brown Skirt Suit",
+            price:"INR 4,568"
         }
     ]
+
+
+
+    let selectData=[]
+    let selecttag=document.getElementById("enter");
+    selecttag.addEventListener("change",()=>{
+      let filtered=selectData.filter((element)=>{
+        if(((element.name).toLowerCase()).includes(selecttag.value)){
+          return true;
+        }
+        else{
+          return false;
+        }
+      })
+      display(filtered);
+    })
+
+
+
+    let container=document.getElementById("container");
+
+    console.log(data);
+    display(data)
+    let count=document.getElementById("count")
+    // count.innerText=0;
+    function display(data){
+        container.innerHTML="";
+        // console.log(data)
+        data.forEach((element)=>{
+            let smallDiv=document.createElement("div");
+            let images=document.createElement("img");
+            images.setAttribute("src",element.image);
+            let brand=document.createElement("h4");
+            brand.innerText=element.brand;
+            let name=document.createElement("h3");
+            name.innerText=element.name;
+            let price=document.createElement("p");
+            price.innerText=element.price;
+            let button=document.createElement("button");
+            button.innerText="Add To Cart";
+            button.setAttribute("id","addBtn");
+            let btn=document.getElementById("addBtn");
+            button.addEventListener("click",()=>{
+                  
+                count.innerText++
+                // localStorage.setItem("cart",JSON.stringify(favData));
+                let favData=JSON.parse(localStorage.getItem("cart"));
+                if(favData==null){
+                    favData=[];
+                    
+                }
+                let favAlready=false;
+                for(let i=0;i<favData.length;i++){
+                    if(((element.name).toLowerCase()).includes(selecttag.value)){
+                        favAlready=true;
+                        break;
+                    }
+                }
+
+                if(favAlready==true){
+                    button.innerText="Go To Cart";
+                    // localStorage.setItem("cart",JSON.stringify(favData));
+                }
+                else{
+                    favData.push(element);
+                    localStorage.setItem("cart",JSON.stringify(favData));
+                    button.innerText="Go To Cart";
+                }
+
+
+            })
+
+            
+
+
+
+            smallDiv.append(images,brand,name,price,button);
+            container.append(smallDiv)
+        });
+    }
 </script>
 </html>
