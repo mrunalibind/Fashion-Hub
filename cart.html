@@ -78,16 +78,18 @@
             border-radius: 50%;
         }
         #fav-container{
-            width: 600px;
-            box-shadow: rgba(243, 236, 236, 0.757) 0px 2px 8px 0px;
-            /* background-color: rgb(242, 234, 234); */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            width: 50%;
             margin: auto;
-            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-            display: flex;
-            justify-content: space-between;
+            
+            
+        }
+        #fav-container>div{
+            box-shadow: rgba(243, 236, 236, 0.757) 0px 2px 8px 0px;
         }
         #fav-container img{
-            width: 300px;
+            width: 80%;
         }
         #sec{
             margin-top: 30px;
@@ -167,9 +169,9 @@
         <!-- Here Append All the Favourites-->
     </div>
     <div style="width: 250px;margin: auto;margin-top: 40px;">
-        <h2>Item Total: <span> INR. 0</span></h2>
+        <h2>Item Total: INR.<span id="totalP">0</span></h2>
         <!-- <h2>Estimated Total:<span> INR 0</span></h2> -->
-        <a href="">
+        <a href="./payment.html">
             <button id="check" style="padding: 10px 60px;
             background-color: black;color: white;font-size: 20px;margin-top: 40px;cursor: pointer;">Checkout</button>
         </a>
@@ -180,16 +182,22 @@
     <script>
 
     let container=document.getElementById("fav-container");
-    let favData=JSON.parse(localStorage.getItem("cart"));
+    let favData=JSON.parse(localStorage.getItem("cart"))||[];
+    let total=document.getElementById("totalP");
+    let check=document.getElementById("check")
 
-    if(favData==null){
-      favData=[];
-    }
+    // if(favData==null){
+    //   favData=[];
+    // }
     display(favData);
 
     function display(data){
       container.innerHTML="";
-      data.forEach((element) => {
+      data.forEach((element,index) => {
+        data.forEach((element,index)=>{
+            
+            total.innerText=Number(element.price)
+        })
         let smallDiv=document.createElement("div");
 
         let secDiv=document.createElement("div");
@@ -212,30 +220,43 @@
         let minus=document.createElement("button");
         minus.innerText="-";
         minus.setAttribute("id","minus")
-        plus.addEventListener("click",()=>{
-        console.log(typeof +one.innerText);
-           one.innerText++;
-           total.innerText=element.price*(Number(one.innerText)); 
-        })
-        minus.addEventListener("click",()=>{
-           one.innerText--; 
-           total.innerText=element.price;
-        })
+        // plus.addEventListener("click",()=>{
+        // console.log(typeof +one.innerText);
+        //    one.innerText++;
+        //    total.innerText=element.price*(Number(one.innerText)); 
+        // })
+        // minus.addEventListener("click",()=>{
+        //    one.innerText--; 
+        //    total.innerText=element.price;
+        // })
 
         let deleteBtn=document.createElement("button");
+        
         deleteBtn.innerText="Delete"
         deleteBtn.setAttribute("id","delete")
+        
         deleteBtn.addEventListener("click",()=>{
-            favData.splice(index,1)
+        //     for(let i=0;i<favData.length;i++){
+        //     total.innerText+=Number(favData[i].price)
+        // }
+            favData.splice(index,1);
+            localStorage.setItem("cart",JSON.stringify(favData))
+            display(favData);
+            console.log(favData)
+            
         })
-        let total=document.querySelector("span");
-        total.innerText=element.price;
+        
+        
 
         smallDiv.append(images);
         secDiv.append(brand,name,price,plus,one,minus,deleteBtn)
         container.append(smallDiv,secDiv)
+    //     check.addEventListener("click",(e)=>{
+    //         e.preventDefault()
+    //         console.log("Ok");
+    //    })
       });
-        
+       
     }
     
 
