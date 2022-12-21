@@ -861,22 +861,15 @@ body { font-family: sans-serif; }
             if(event.key==="Enter"){
                 localStorage.setItem("input",enter.value)
                 document.getElementById("clicking").click();   
-                // console.log("Enter Event")
-                let objArr=[
-                    {
-                        img:"https://www.jcrew.com/s7-img-facade/BF356_WT0002_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=309&hei=309",
-                        name:"FormKnit suiting shell tank",
-                        price:"INR 4,759"
-                    }
-                ]
+                
             }
         })
 
 
-        $(function(){
-        $('body').keyup(function(e){
+        (function(){
+        ('body').keyup(function(e){
             if (e.keyCode == 13){  
-                $("#clicking").click();
+                ("#clicking").click();
             }
         })
         });
