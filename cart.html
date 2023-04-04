@@ -169,7 +169,7 @@
         <!-- Here Append All the Favourites-->
     </div>
     <div style="width: 250px;margin: auto;margin-top: 40px;">
-        <h2>Item Total: INR.<span id="totalP">0</span></h2>
+        <h2>Item Total: INR.<span id="totalP"></span></h2>
         <!-- <h2>Estimated Total:<span> INR 0</span></h2> -->
         <a href="./payment.html">
             <button id="check" style="padding: 10px 60px;
@@ -193,11 +193,9 @@
 
     function display(data){
       container.innerHTML="";
+      let sum=0;
       data.forEach((element,index) => {
-        data.forEach((element,index)=>{
-            
-            total.innerText=Number(element.price)
-        })
+        sum+=element.price*element.quantity
         let smallDiv=document.createElement("div");
 
         let secDiv=document.createElement("div");
@@ -216,19 +214,22 @@
     
         plus.setAttribute("id","plus")
         let one=document.createElement("p");
-        one.innerText=1;
+        one.innerText=element.quantity;
+        plus.addEventListener("click",()=>{
+            one.innerText++;
+            total.innerText=Number(total.innerText)+Number(element.price)
+        })
+
         let minus=document.createElement("button");
         minus.innerText="-";
         minus.setAttribute("id","minus")
-        // plus.addEventListener("click",()=>{
-        // console.log(typeof +one.innerText);
-        //    one.innerText++;
-        //    total.innerText=element.price*(Number(one.innerText)); 
-        // })
-        // minus.addEventListener("click",()=>{
-        //    one.innerText--; 
-        //    total.innerText=element.price;
-        // })
+        minus.addEventListener("click",()=>{
+            if(one.innerText>1){
+                one.innerText--;
+                total.innerText=Number(total.innerText)-Number(element.price)
+            }
+        })
+        
 
         let deleteBtn=document.createElement("button");
         
@@ -236,9 +237,7 @@
         deleteBtn.setAttribute("id","delete")
         
         deleteBtn.addEventListener("click",()=>{
-        //     for(let i=0;i<favData.length;i++){
-        //     total.innerText+=Number(favData[i].price)
-        // }
+        
             favData.splice(index,1);
             localStorage.setItem("cart",JSON.stringify(favData))
             display(favData);
@@ -251,11 +250,9 @@
         smallDiv.append(images);
         secDiv.append(brand,name,price,plus,one,minus,deleteBtn)
         container.append(smallDiv,secDiv)
-    //     check.addEventListener("click",(e)=>{
-    //         e.preventDefault()
-    //         console.log("Ok");
-    //    })
+    
       });
+      total.innerText=sum;
        
     }
     
