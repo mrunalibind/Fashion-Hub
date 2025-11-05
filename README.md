@@ -9,6 +9,11 @@ Built in just **5 days** using **HTML, CSS, and JavaScript**, this project showc
 **Fashion Hub** is your go-to online fashion destination, offering a wide range of stylish clothing, accessories, and more.  
 The website provides an intuitive and engaging shopping experience, allowing users to browse collections, view details, and add items to their cart seamlessly.
 
+<img width="1892" height="836" alt="Screenshot 2025-11-05 155544" src="https://github.com/user-attachments/assets/640e176e-1fb0-41a2-9eec-adf492e6019e" />
+
+
+<img width="1899" height="846" alt="Screenshot 2025-11-05 154756" src="https://github.com/user-attachments/assets/ab1ebbfe-a8db-458f-8e28-456045663ab6" />
+
 ---
 
 ## 💡 Features
